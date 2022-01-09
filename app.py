@@ -1,13 +1,17 @@
-import LeerEmail
-import folders
-import readpdf
-import cropping
-import ocr
+import util
 import Email
+import config
 
-folders.delete("./Cropped/","*.jpg")
-folders.delete("./Image/","*.jpg")
+util.file_delete("./Cropped/","*.jpg")
+util.file_delete("./Image/","*.jpg")
 
-LeerEmail.read('Repaletizados', 'pdf')
+email_leido = Email.read('Repaletizados', 'pdf')
 
-Email.send("Repaletizados","Probando archivo adjunto","j.ibarra@agrofruta.cl", "Repalitizados.json")
+if email_leido:
+    util.convert_PDF_to_JPEG('Repaletizados')
+
+    util.recortar("./Image/*.jpg")
+
+    util.OCR()
+
+    Email.send("Repaletizados","Archivo de repaletizados", config.email_to, "Repalitizados.json")
