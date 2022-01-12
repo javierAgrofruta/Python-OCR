@@ -46,17 +46,17 @@ def recortar(folder):
     images = glob.glob(folder)
 
     for image in images:
-            img=cv2.imread(image,1)
+        img=cv2.imread(image,1)
 
-            cortes(img, 70, 820, 500, 4228, image_counter)
-            image_counter += 1
-            cortes(img, 2900, 820, 400, 4228, image_counter)
-            image_counter += 1
+        cortes(img, 70, 870, 500, 4228, image_counter)
+        image_counter += 1
+        cortes(img, 3000, 820, 400, 4228, image_counter)
+        image_counter += 1
 
 def OCR():
     pytesseract.tesseract_cmd = config.tesseract_cmd
 
-    images = glob.glob("./Cropped/*.jpg")
+    images = sorted(glob.glob("./Cropped/*.jpg"), key=os.path.getctime, reverse=False)
     repaletizaje = []
     count = 0
     while len(images) > count:
@@ -84,18 +84,25 @@ def OCR():
                     pallets_originales = []
                 pallet_nuevo = respuesta[0]
             else:
-                respuesta_1 = re.findall(r'[0-9]{8,12}', datos_1[e])
-                pallets_originales.append(respuesta_1[0])
-                e += 1
+                if e < len(datos_1):
+                    respuesta_1 = re.findall(r'[0-9]{8,12}', datos_1[e])
+                    pallets_originales.append(respuesta_1[0])
+                    e += 1
+                else:               # ERROR de lectura
+                    return False
             i += 1
         repaletizaje.append({'pallet_nuevo': pallet_nuevo, 'pallets_originales': pallets_originales})
         count += 2
 
     
     repaletizaje = {"Repaletizajes": repaletizaje}
-    print(repaletizaje)
+    #print(repaletizaje)
     
     with open('Repalitizados.json', 'w') as fp:
         json.dump(repaletizaje, fp)
+
+    return True
+
+
 
 

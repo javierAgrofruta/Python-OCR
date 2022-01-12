@@ -13,13 +13,20 @@ def decodificar(mensaje_codificado):
     mensaje = mensaje_base64.decode('ascii')
     return mensaje
 
-#user = util.decodificar(os.environ.get('PYTHON_EMAIL'))
-password = decodificar(os.environ.get('PYTHON_PASS'))
-#poppler_path = os.environ.get('PYTHON_POPPLER')
-#tesseract_cmd = os.environ.get('PYTHON_TESSERACT')
-smtp = 'smtp.office365.com'
 
-user = os.environ.get('PYTHON_EMAIL')
-email_to = 'j.ibarra@agrofruta.cl' 
+
+
+# --------------------------- CON ENVIRON  ---------------------------------
+recipients = os.environ.get('RECIPIENTS')
+recipients = recipients.split('/')
+email_recipients = ", ".join(recipients)
+
+alert = os.environ.get('ALERT_EMAIL')
+alert = alert.split('/')
+alert_email = ", ".join(alert)
+
+user = os.environ.get('USER_EMAIL')
+password = decodificar(os.environ.get('USER_PASS'))
+
 poppler_path = r'C:\Users\javie\Desktop\poppler-0.68.0\bin'
 tesseract_cmd =  r'C:\Program Files\Tesseract-OCR\tesseract.exe'

@@ -1,1 +1,146 @@
-{"Repaletizajes": [{"pallet_nuevo": "0860210274", "pallets_originales": ["0862000116", "0862000141"]}, {"pallet_nuevo": "0860123511", "pallets_originales": ["0862000055", "0862000075", "0862000124", "0862000144"]}, {"pallet_nuevo": "0860123514", "pallets_originales": ["0862000141", "0862000150"]}, {"pallet_nuevo": "0860123515", "pallets_originales": ["0862000097", "0862000121", "0862000152"]}, {"pallet_nuevo": "0860123516", "pallets_originales": ["0862000119", "0862000149"]}]}
+{
+    "Repaletizajes": [
+        {
+            "pallet_nuevo": "0860210483",
+            "pallets_originales": [
+                "0862000643",
+                "0862000699"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210492",
+            "pallets_originales": [
+                "0862000721",
+                "0862000731"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210494",
+            "pallets_originales": [
+                "0862000722",
+                "0862000732"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210495",
+            "pallets_originales": [
+                "0862000723",
+                "0862000729"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210496",
+            "pallets_originales": [
+                "0862000724",
+                "0862000730"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210493",
+            "pallets_originales": [
+                "0862000690",
+                "0862000705",
+                "0862000725",
+                "0862000742"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860050005",
+            "pallets_originales": [
+                "0862000692",
+                "0862000706",
+                "0862000727",
+                "0862000740"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860050004",
+            "pallets_originales": [
+                "0862000680",
+                "0862000691",
+                "0862000704",
+                "0862000726",
+                "0862000744",
+                "0862000739"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210485",
+            "pallets_originales": [
+                "0862000694",
+                "0862000698"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210486",
+            "pallets_originales": [
+                "0862000695",
+                "0862000697"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210487",
+            "pallets_originales": [
+                "0862000674",
+                "0862000707"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210488",
+            "pallets_originales": [
+                "0862000673",
+                "0862000708"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210489",
+            "pallets_originales": [
+                "0862000676",
+                "0862000713"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210490",
+            "pallets_originales": [
+                "0862000685",
+                "0862000693",
+                "0862000703"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210497",
+            "pallets_originales": [
+                "0862000714",
+                "0862000715"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210491",
+            "pallets_originales": [
+                "0862000702",
+                "0862000719"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210498",
+            "pallets_originales": [
+                "0862000711",
+                "0862000716"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210499",
+            "pallets_originales": [
+                "0862000594",
+                "0862000717"
+            ]
+        },
+        {
+            "pallet_nuevo": "0860210500",
+            "pallets_originales": [
+                "0862000701",
+                "0862000718"
+            ]
+        }
+    ]
+}

@@ -6,7 +6,6 @@ import smtplib
 import imaplib
 import email
 import os
-import shelve
 
 import util
 import config
@@ -110,14 +109,9 @@ def read(archivo, termino, carpeta=None):
                                     open(ruta_archivo, "wb").write(part.get_payload(decode=True))
                                     email_leido = True 
 
-        # Actualizamos mensajes leidos
-        file = open('datos.dat','w')
-        file.write(str(mensajes))
-        file.close()
-
     imap.close()
     imap.logout()
-    return email_leido
+    return email_leido, mensajes
 #email.send('test de prueba 1', 'mesaje enviado desde python mediante smtplib', 'jaibarra1@miuandes.cl')
 
 #read('Repaletizados', 'pdf')
